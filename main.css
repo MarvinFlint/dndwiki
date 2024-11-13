@@ -133,6 +133,12 @@ a {
     display: flex;
     padding: 3rem;
     flex-direction: column;
+    width: 100%;
+}
+
+.class p {
+    max-width: 800px;
+    margin: auto;
 }
 
 .link-box{
