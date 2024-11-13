@@ -1,6 +1,7 @@
 /* elements */
 const mainNav = document.getElementById('nav-header');
 const stickyNav = document.getElementById('sticky-nav');
+const settings = document.getElementById('settings-switch');
 
 console.log(mainNav, stickyNav);
 // Create an Intersection Observer
@@ -27,15 +28,37 @@ observer.observe(mainNav);
 
 /* Accessibility Settings */
 let settingsOpen = false;
+let useSettings = true;
+
 function showAccessibilitySettings(){
     settingsOpen = true;
-    document.getElementById('settings').style.display = 'fixed';
+    document.getElementById('settings').style.display = 'flex';
+    settings.focus();
 }
+
+function closeSettings(){
+    settingsOpen = false;
+    document.getElementById('settings').style.display = 'none';
+}
+
+settings.addEventListener('change', function(){
+    useSettings = settings.checked;
+    settings.setAttribute('aria-checked', settings.checked);
+})
 
 document.addEventListener('keydown', function(e){
     if(e.key == 'Escape'){
         if(settingsOpen){
             document.getElementById('settings').style.display = 'none';
+        }
+    }
+    if(useSettings){
+        if(e.key == "t"){
+            console.log("scrolled");
+            window.scrollTo(0, 0)
+        };
+        if(e.key == "o"){
+            showAccessibilitySettings();
         }
     }
 })

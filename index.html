@@ -12,9 +12,22 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="tab-navigation">
-        <button aria-label="Accessibility Settings" onclick="showAccesssibilitySettings()">Accessibility Settings?</button>
-    </div>
+    <button id="tab-nav-settings" tabindex="0" aria-label="Accessibility Settings" onclick="showAccessibilitySettings()">Accessibility Settings?</button>
+    <div id="settings">
+        <div id="settings-inner">
+            <h2>Accessibility Settings</h2>
+            <p>We are giving you some options to more easily navigate our page. If you do not wish to use these shortcuts, you can disable them here:</p>
+            <div id="checkbox">
+                <label for="settings-switch">Use extra shortcuts</label>
+                <input type="checkbox" checked id="settings-switch" aria-checked="true">
+            </div>
+            <ul>
+                <li><strong>t</strong>: Back to top</li>
+                <li><strong>o</strong>: Open these options anytime</li> 
+            </ul>
+            <button onclick="closeSettings()">Close</button>            
+        </div>        
+    </div>   
     <nav aria-hidden="true" tabindex="-1" id="sticky-nav">
         <ul class="sticky-nav-list">
             <li class="nav-list-item" id=""><a tabindex="-1" href="#">Classes</a></li>
