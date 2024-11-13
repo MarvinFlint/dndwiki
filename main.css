@@ -35,3 +35,46 @@ header{
     height: 70px;
     border: 1px solid black;
 }
+
+body {
+    background-color: var(--secondary);
+    max-width: 1600px;
+    margin: auto;
+}
+
+.section {
+    background-color: var(--background);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+}
+
+.section-heading{
+    display: flex;
+    background-color: var(--accent);
+    width: 25%;
+    padding: 1rem;
+}
+
+.section-content{
+    display: flex;
+    border-color: var(--text);
+    padding: 1rem;
+}
+
+.skip-link {
+    background: #e77e23;
+    height: 30px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s, opacity 0,2s;
+  }
+  
+.skip-link:focus {
+    opacity: 1;
+    transform: translateY(0%);
+}
