@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+
+.header-container{
+    width: 50%;
+}
+
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nav-list li{
+    margin: 20px;
+}
+
+.nav-list li img{
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+}
