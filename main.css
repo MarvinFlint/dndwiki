@@ -21,6 +21,11 @@ header{
     margin: auto;
 }
 
+a {
+    text-decoration-color: var(--primary);
+    color: var(--primary);
+}
+
 #welcome-header{
     color: var(--accent);
 }
@@ -66,16 +71,36 @@ header{
 
 .section-heading{
     display: flex;
-    background-color: var(--accent);
-    width: 25%;
     padding: 1rem;
+    width: 25%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.section-heading i {
+    font-size: 50px;
 }
 
 .section-content{
     display: flex;
-    border-color: var(--text);
-    border-width: 1rem;
-    padding: 1rem;
+    padding: 3rem;
+    flex-direction: column;
+}
+
+.link-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.class-separator{
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--secondary);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .skip-link {
