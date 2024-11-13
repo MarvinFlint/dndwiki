@@ -30,6 +30,10 @@ header{
     flex: 2 0 15%;
 }
 
+.nav-list li a{
+    padding: 10px;
+}
+
 .nav-list li img{
     width: 70px;
     height: 70px;
