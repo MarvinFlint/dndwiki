@@ -2,10 +2,13 @@
 const mainNav = document.getElementById('nav-header');
 const stickyNav = document.getElementById('sticky-nav');
 
+console.log(mainNav, stickyNav);
 // Create an Intersection Observer
 const observer = new IntersectionObserver(
   (entries) => {
+    console.log("Observer");
     entries.forEach((entry) => {
+        console.log(entry.isIntersecting);
       // If main nav is out of view, show sticky nav
       if (!entry.isIntersecting) {
         stickyNav.style.display = 'block';
