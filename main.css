@@ -6,11 +6,16 @@
     --accent: #fdfded;
 }
 
+:focus{
+    border: 2px solid blue;
+}
+
 body {
     background-color: var(--secondary);
     max-width: 1600px;
     margin: auto;
     font-family: "Open Sans", sans-serif;
+    position: relative;
 }
 
 button{
@@ -24,6 +29,9 @@ button{
 
 #tab-nav-settings{
     opacity: 0;
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }
 
 #tab-nav-settings:focus{
@@ -38,6 +46,7 @@ button{
     position: fixed;
     top:0;
     left:0;
+    z-index: 3;
 }
 
 #settings-inner{
@@ -95,6 +104,7 @@ a {
 .nav-list li a{
     padding: 10px;
     color: var(--accent);
+    text-decoration-color: var(--accent);
 }
 
 .section {
@@ -168,6 +178,7 @@ a {
     display: none;
     background: var(--accent);
     border-bottom: 2rem solid var(--secondary);
+    z-index: 2;
 
 }
 
