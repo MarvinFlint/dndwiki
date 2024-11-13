@@ -19,8 +19,7 @@ header{
 }
 
 .nav-list li{
-    flex: 1 0 21%;
-    margin: ;
+    margin: 20px;
 }
 
 .nav-list li img{
