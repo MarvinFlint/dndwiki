@@ -13,6 +13,43 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+button{
+    padding: 10px   15px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background-color: var(--accent);
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+#tab-nav-settings{
+    opacity: 0;
+}
+
+#tab-nav-settings:focus{
+    opacity: 1;
+}
+
+#settings{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+#settings-inner{
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 25px;
+    height: 80%;
+}
 header{
     display: flex;
     flex-direction: row;
