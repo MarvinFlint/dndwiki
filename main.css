@@ -54,6 +54,7 @@ header{
     padding: 2rem;
     margin: 2rem;
     display: flex;
+    position: relative;
 }
 
 .section-heading{
@@ -66,25 +67,28 @@ header{
 .section-content{
     display: flex;
     border-color: var(--text);
+    border-width: 1rem;
     padding: 1rem;
 }
 
 .skip-link {
-    background: #e77e23;
-    height: 30px;
-    left: 50%;
-    padding: 8px;
+    background: var(--accent);
+    padding: 1rem;
     position: absolute;
+    top: -30px;
+    border-radius: 1rem;
+    border-color: var(--primary);
     opacity: 0;
     transform: translateY(-100%);
-    transition: transform 0.3s, opacity 0,2s;
-  }
-  
+    transition: transform 0.3s, opacity 0.2s;
+}
+
 .skip-link:focus {
+    text-decoration-color: var(--primary);
+    color: var(--primary);
     opacity: 1;
     transform: translateY(0%);
 }
-
 
 #sticky-nav{
     position: fixed;
