@@ -23,3 +23,19 @@ const observer = new IntersectionObserver(
 
 // Observe the main navigation
 observer.observe(mainNav);
+
+
+/* Accessibility Settings */
+let settingsOpen = false;
+function showAccessibilitySettings(){
+    settingsOpen = true;
+    document.getElementById('settings').style.display = 'fixed';
+}
+
+document.addEventListener('keydown', function(e){
+    if(e.key == 'Escape'){
+        if(settingsOpen){
+            document.getElementById('settings').style.display = 'none';
+        }
+    }
+})
