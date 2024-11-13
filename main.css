@@ -18,12 +18,42 @@ header{
     flex-wrap: wrap;
 }
 
+.nav-list i{
+    font-size: 50px;
+}
+
 .nav-list li{
     margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 2 0 15%;
 }
 
 .nav-list li img{
     width: 70px;
     height: 70px;
     border: 1px solid black;
+}
+
+#sticky-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.sticky-nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    display: none;
+}
+
+.sticky-nav-list li{
+    width: calc(100/7);    
+    display: flex;
+    align-items: center;
 }
