@@ -1,3 +1,11 @@
+:root{
+    --text: #15161e;
+    --background: #ebe1c5;
+    --primary: #439004;
+    --secondary: #54412a;
+    --accent: #fdfded;
+}
+
 header{
     display: flex;
     flex-direction: row;
